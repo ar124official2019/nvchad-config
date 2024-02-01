@@ -55,6 +55,12 @@ local plugins = {
       require "custom.configs.nvimlint"
     end,
   },
+  
+  {
+     "mg979/vim-visual-multi",
+     lazy = false,
+  }
+    
 
   -- To make a plugin not be loaded
   -- {
