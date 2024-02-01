@@ -7,8 +7,8 @@ M.general = {
 
     --  format with conform
     ["<leader>fm"] = {
-      function()
-        require("conform").format()
+      function(args)
+        require("conform").format({ bufnr = args.buf })
       end,
       "formatting",
     }
