@@ -52,7 +52,7 @@ M.mason = {
     "prettier",
     "shfmt",
     -- "prettierd"
-    
+
     "firefox-debug-adaptor",
     "chrome-debug-adaptor",
     "js-debug-adaptor",

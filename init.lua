@@ -5,5 +5,4 @@
 --   pattern = "*",
 --   command = "tabdo wincmd =",
 -- })
-
-require "plugins.configs.luasnip"
+--

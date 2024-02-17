@@ -7,15 +7,23 @@ M.general = {
 
     --  format with conform
     ["<leader>fm"] = {
-      function(args)
-        require("conform").format({ bufnr = args.buf })
+      function()
+        require("conform").format({ async = true })
       end,
       "formatting",
     }
-
   },
+
   v = {
     [">"] = { ">gv", "indent"},
+
+    --  format with conform
+    ["<leader>fm"] = {
+      function()
+        require("conform").format({ async = true })
+      end,
+      "formatting",
+    }
   },
 }
 

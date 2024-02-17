@@ -38,6 +38,7 @@ local plugins = {
     end,
   },
 
+
   {
     "stevearc/conform.nvim",
     --  for users those who want auto-save conform + lazyloading!
@@ -55,7 +56,7 @@ local plugins = {
       require "custom.configs.nvimlint"
     end,
   },
-  
+
   {
   'Exafunction/codeium.vim',
     config = function ()
@@ -66,12 +67,20 @@ local plugins = {
       vim.keymap.set('i', '<c-x>', function() return vim.fn['codeium#Clear']() end, { expr = true, silent = true })
     end
   },
-  
+
+  {
+    "L3MON4D3/LuaSnip",
+    version = "v2.2.0",
+    build = "make install_jsregexp",
+    config = function ()
+      require("custom.configs.luasnip")
+    end
+  },
+
   {
      "mg979/vim-visual-multi",
      lazy = false,
   }
-    
 
   -- To make a plugin not be loaded
   -- {
