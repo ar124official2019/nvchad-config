@@ -80,8 +80,22 @@ local plugins = {
   {
      "mg979/vim-visual-multi",
      lazy = false,
-  }
+  },
 
+  {
+    "mrquantumcodes/bufferchad.nvim",
+    lazy = false,
+    config = function ()
+      require("custom.configs.bufferchad")
+    end
+  },
+
+  {
+  'rmagatti/auto-session',
+    config = function()
+      require("custom.configs.auto_session")
+    end
+  }
   -- To make a plugin not be loaded
   -- {
   --   "NvChad/nvim-colorizer.lua",
