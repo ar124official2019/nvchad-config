@@ -1,6 +1,7 @@
 local overrides = require "custom.configs.overrides"
 
 ---@type NvPluginSpec[]
+
 local plugins = {
 
   -- Override plugin definition options
@@ -50,21 +51,16 @@ local plugins = {
 
   {
     "mfussenegger/nvim-lint",
-    --  for users those who want auto-save conform + lazyloading!
-    -- event = "BufWritePre"
     config = function()
       require "custom.configs.nvimlint"
     end,
   },
 
   {
-  'Exafunction/codeium.vim',
+    'Exafunction/codeium.vim',
+    lazy = false,
     config = function ()
-      -- Change '<C-g>' here to any keycode you like.
-      vim.keymap.set('i', '<C-g>', function () return vim.fn['codeium#Accept']() end, { expr = true, silent = true })
-      vim.keymap.set('i', '<c-;>', function() return vim.fn['codeium#CycleCompletions'](1) end, { expr = true, silent = true })
-      vim.keymap.set('i', '<c-,>', function() return vim.fn['codeium#CycleCompletions'](-1) end, { expr = true, silent = true })
-      vim.keymap.set('i', '<c-x>', function() return vim.fn['codeium#Clear']() end, { expr = true, silent = true })
+      require "custom.configs.codeium"
     end
   },
 
@@ -91,24 +87,9 @@ local plugins = {
   },
 
   {
-  'rmagatti/auto-session',
-    config = function()
-      require("custom.configs.auto_session")
-    end
-  }
-  -- To make a plugin not be loaded
-  -- {
-  --   "NvChad/nvim-colorizer.lua",
-  --   enabled = false
-  -- },
-
-  -- All NvChad plugins are lazy-loaded by default
-  -- For a plugin to be loaded, you will need to set either `ft`, `cmd`, `keys`, `event`, or set `lazy = false`
-  -- If you want a plugin to load on startup, add `lazy = false` to a plugin spec, for example
-  -- {
-  --   "mg979/vim-visual-multi",
-  --   lazy = false,
-  -- }
+    "tpope/vim-obsession",
+    lazy = false,
+  },
 }
 
 return plugins
