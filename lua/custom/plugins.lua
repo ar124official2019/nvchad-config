@@ -1,4 +1,4 @@
-local overrides = require "configs.overrides"
+local overrides = require "custom.configs.overrides"
 
 ---@type NvPluginSpec[]
 
@@ -9,8 +9,8 @@ local plugins = {
   {
     "neovim/nvim-lspconfig",
     config = function()
-      require "configs.lspconfig"
-      require "configs.lspconfig"
+      require "plugins.configs.lspconfig"
+      require "custom.configs.lspconfig"
     end, -- Override to setup mason-lspconfig
   },
 
@@ -45,14 +45,14 @@ local plugins = {
     --  for users those who want auto-save conform + lazyloading!
     event = "BufWritePre",
     config = function()
-      require "configs.conform"
+      require "custom.configs.conform"
     end,
   },
 
   {
     "mfussenegger/nvim-lint",
     config = function()
-      require "configs.nvimlint"
+      require "custom.configs.nvimlint"
     end,
   },
 
@@ -60,7 +60,7 @@ local plugins = {
     'Exafunction/codeium.vim',
     lazy = false,
     config = function ()
-      require "configs.codeium"
+      require "custom.configs.codeium"
     end
   },
 
@@ -69,7 +69,7 @@ local plugins = {
     version = "v2.2.0",
     build = "make install_jsregexp",
     config = function ()
-      require("configs.luasnip")
+      require("custom.configs.luasnip")
     end
   },
 
@@ -82,7 +82,7 @@ local plugins = {
     "mrquantumcodes/bufferchad.nvim",
     lazy = false,
     config = function ()
-      require("configs.bufferchad")
+      require("custom.configs.bufferchad")
     end
   },
 
