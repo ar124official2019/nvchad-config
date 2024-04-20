@@ -24,38 +24,43 @@ M.treesitter = {
 M.mason = {
   ensure_installed = {
     -- lua stuff
-    "lua-language-server",
-    "stylua",
+    "lua_ls",
 
     -- web dev stuff
-    "html-lsp",
-    "css-lsp",
-    "typescript-language-server",
-    "json-lsp",
+    "html",
+    "cssls",
+    "cssmodules_ls",
+    "somesass_ls",
+    "tailwindcss",
+    "stylelint_lsp",
+    "emmet_language_server",
+    "remark_ls",
 
-    "angular-language-server",
+    "tsserver",
+    "angularls",
+    "eslint",
+    "jsonls",
+    "prismals",
+    "graphql",
+    "denols",
 
-    "cssmodules-language-server",
-    "tailwindcss-language-server",
+    "intelephense",
+    "pylsp",
 
-    "dockerfile-language-server",
-    "docker-compose-language-service",
-    "nginx-language-server",
-    "yaml-language-server",
-
-    "stylelint",
-    "eslint-lsp",
-
-    "emmet-ls",
+    "yamlls",
+    "dockerls",
+    "docker_compose_language_service",
+    "ansiblels",
+    -- "nginx-language-server",
     -- "emmet-language-server",
-    "codespell",
-    "prettier",
-    "shfmt",
+    -- "codespell",
+    -- "prettier",
+    -- "shfmt",
     -- "prettierd"
 
-    "firefox-debug-adaptor",
-    "chrome-debug-adaptor",
-    "js-debug-adaptor",
+    -- "firefox-debug-adaptor",
+    -- "chrome-debug-adaptor",
+    -- "js-debug-adaptor",
   },
 }
 

@@ -4,20 +4,24 @@ local overrides = require "configs.overrides"
 
 local plugins = {
 
-  -- Override plugin definition options
+  {
+    "williamboman/mason.nvim",
+    config = function()
+    end,
+  },
+
+  {
+    "williamboman/mason-lspconfig.nvim",
+    config = function()
+      require "configs.mason"
+    end,
+  },
 
   {
     "neovim/nvim-lspconfig",
     config = function()
       require "configs.lspconfig"
-      require "configs.lspconfig"
-    end, -- Override to setup mason-lspconfig
-  },
-
-  -- override plugin configs
-  {
-    "williamboman/mason.nvim",
-    opts = overrides.mason,
+    end,
   },
 
   {
